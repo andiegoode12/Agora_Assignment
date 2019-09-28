@@ -1,0 +1,200 @@
+:root {
+    --light-blue: #71a1be;
+    --medium-blue: #005282;
+    --dark-blue: #05263a;
+    --pink: #f58c99;
+}
+
+#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7, #section-8 {
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#section-2, #section-4, #section-3, #section-5, #section-6, #section-7, #section-8 {
+    background-color: var(--light-blue);
+    color: white;
+    line-height: 180%;
+    padding-top: 20px;
+}
+#section-4, #section-7 {
+    background-color: var(--dark-blue);
+}
+
+#section-5 {
+    background-color: lightgray;
+    color: black;
+}
+
+#section-8 {
+    background-color: white;
+    color: black;
+}
+
+#section-6 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--pink);
+}
+
+#jimrickardspic {
+    width: 80%;
+}
+
+#triangle-down {
+    width: 0; 
+    height: 0; 
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 50px solid var(--dark-blue);
+    display: block;
+    margin: auto;
+  }
+
+body {
+    font-family: "Lato", sans-serif;
+    font-family: arial, sans-serif;
+    margin: 0;
+}
+
+hr {
+    width: 80%;
+    border: 2px solid var(--medium-blue);
+}
+
+button {
+    background-color: var(--medium-blue);
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+li {
+    list-style-type: none;
+    background: url(CheckmarkBox.png) no-repeat left top ;
+    padding-left: 80px;
+    padding-right: 10%;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.head {
+    padding-bottom: 10px;
+}
+
+.checkbox {
+    padding-bottom: 10px;
+}
+
+.mobile-hide {
+    display: none !important;
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    body {
+        padding-left: 50px;
+        padding-right: 50px;
+    
+    }
+    #section-2 {
+        width: 40%;
+        height: 500px;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        border-right: 20px solid white;
+        border-bottom: 20px solid white;
+    }
+    
+    #section-3 {
+        height: 500px;
+        width: 60%;
+        display: block;
+        float: right;
+        box-sizing: border-box;
+        border-bottom: 20px solid white;
+    }
+    #section-4 {
+        width: 50%;
+        height: 700px;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        border-bottom: 20px solid white;
+    }
+    #section-5 {
+        width: 50%;
+        height: 700px;
+        display: block;
+        float: right;
+        box-sizing: border-box;
+        border-bottom: 20px solid white;
+    }
+
+    #section-6 { 
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+
+    #jimrickardspic {
+        width: 60%;
+    }
+
+    button {
+        width: 500px;
+    }
+
+    li { 
+        padding-right: 0;
+    }
+
+    .mobile-hide {
+        display: inline-block !important;
+        vertical-align: middle;
+        width: 5%;
+    }
+}
+
+/* Had some problems with the bullets overflowing. 
+I decided to just change the layout a little at certain screen sizes. */
+@media only screen and (max-width:1024px) and (min-width: 768px) {
+
+    #section-4 {
+        width: 50%;
+        height: 1000px;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+    }
+    
+    #section-5 {
+        width: 50%;
+        height: 1000px;
+        display: block;
+        float: right;
+        box-sizing: border-box;
+    }
+
+    #section-6 { 
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+
+    button {
+        width: 500px;
+    }
+}

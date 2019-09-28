@@ -1,0 +1,244 @@
+/* I have never used flex but I thought I would try it for this assignment given the layout of the page.
+In this folder there is also a css file (agora_page.css) that does not use flex with its corresponding html file (agora_page.html)*/
+
+:root {
+    --light-blue: #71a1be;
+    --medium-blue: #005282;
+    --dark-blue: #05263a;
+    --pink: #f58c99;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", arial, sans-serif;
+    line-height: 140%;
+}
+
+#container-1, #container-2, #container-3, #container-4, #container-5, #container-6 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+}
+
+#container-2, #container-3 {
+    padding: 0;
+}
+
+#rickards-container, #container-5 {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+#list-container {
+    background-color: lightgray;
+}
+
+#rickards-container, #list-container {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    align-self: stretch;
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+}
+
+#rickards-container img {
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px 10px 50px;
+    min-height: 250px;
+}
+
+#container-4 {
+    background-color: var(--pink);
+    color: white;
+}
+
+#container-4 img {
+    display: none !important;
+}
+
+#calendar-container, #countdown-container {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    align-self: stretch;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--light-blue);
+    color: white;
+    padding: 20px 10px 20px 10px;
+}
+
+#triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 50px solid var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 0;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding-bottom: 20px;
+}
+
+.checkbox {
+    padding: 10px 0px 20px 0px;
+}
+
+.list {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bullet {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: space-between;
+    padding: 10px 10px 10px 10px;
+}
+
+.bullet-mark {
+    display: flex;
+    align-self: flex-start;
+    padding: 0px 0px 0px 10px;
+}
+
+.bullet-text {
+    display: flex;
+    justify-content: space-around;
+    align-self: flex-end;
+    text-align: left;
+    padding: 10px 0px 10px 20px;
+}
+
+.endpoint-response {
+    padding: 20px 0px 20px 0px;
+}
+
+hr {
+    width: 80%;
+    border: 2px solid var(--medium-blue);
+}
+
+h1, h2, h3, h4 {
+    padding: 10px 0px 10px 0px;
+}
+
+button {
+    display: flex;
+    background-color: var(--medium-blue);
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 0px 15px 0px;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+img {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    max-width: 100%;
+    display: inline-block;
+    padding: 20px 0px 20px 0px;
+}
+
+ul {
+    padding: 20px 0px 0px 10px;
+}
+
+li {
+    list-style-type: none;
+    background: url(CheckmarkBox.png) no-repeat left top;
+    padding-left: 90px;
+    padding-right: 10%;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+span {
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    * {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    button {
+        width: 600px;
+    }
+    #container-2 {
+        flex-direction: row;
+        /* align-items: flex-start; */
+    }
+    #calendar-container {
+        width: 40%;
+        box-sizing: border-box;
+        border-right: 20px solid white;
+        border-bottom: 20px solid white;
+    }
+    #countdown-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        width: 60%;
+        box-sizing: border-box;
+        border-bottom: 20px solid white;
+    }
+    #countdown-container h3 {
+        padding: 50px 0px 50px 0px;
+    }
+    #container-3 {
+        flex-direction: row;
+    }
+    #rickards-container, #list-container {
+        display: flex;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-self: stretch;
+        flex-direction: column;
+        width: 50%;
+        padding: 20px 0px 20px 0px;
+    }
+    
+    #container-4 {
+        flex-direction: row;
+        align-items: center;
+    }
+    #container-4 img {
+        display: inline-block !important;
+        vertical-align: middle;
+        box-sizing: content-box;
+        padding: 10px 10px 10px 10px;
+        width: 6%;
+    }
+
+    .bullet-mark {
+        display: flex;
+        align-self: flex-start;
+        padding: 0;
+    }
+}
