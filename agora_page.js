@@ -1,6 +1,6 @@
 
-var countdownStartDate = new Date();//"May 24, 2020 00:00:00");
-var countdownEndDate = new Date("October 05, 2019 00:00:00");//"May 29, 2020 17:00:00");
+var countdownStartDate = new Date();
+var countdownEndDate = new Date("October 05, 2019 00:00:00");
 
 // async to ensure DOM is loaded
 async function onChangeCheck1() {
@@ -37,7 +37,7 @@ async function buttonCheck() {
 function countdown(endDate) {
     // evaluate every second
     setInterval(function () {
-        var startDate = new Date();//"May 24, 2020 00:00:00");
+        var startDate = new Date();
         // get the time between the two dates
         between = endDate.getTime() - startDate.getTime();
 
