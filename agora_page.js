@@ -1,6 +1,6 @@
 
 var countdownStartDate = new Date();//"May 24, 2020 00:00:00");
-var countdownEndDate = new Date("October 02, 2019 00:00:00");//"May 29, 2020 17:00:00");
+var countdownEndDate = new Date("October 05, 2019 00:00:00");//"May 29, 2020 17:00:00");
 
 // async to ensure DOM is loaded
 async function onChangeCheck1() {
